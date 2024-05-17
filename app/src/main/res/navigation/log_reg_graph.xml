@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/log_reg_graph"
+    app:startDestination="@id/introductionFragment">
+
+    <fragment
+        android:id="@+id/accountOptionsFragment"
+        android:name="com.example.store2.fragments.logReg.AccountOptionsFragment"
+        android:label="AccountOptionsFragment"
+        tools:layout="@layout/fragment_account_options">
+        <action
+            android:id="@+id/action_accountOptionsFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/from_right_animation"
+            app:exitAnim="@anim/to_left_animation"
+            app:popEnterAnim="@anim/from_left_animation"
+            app:popExitAnim="@anim/to_right_animation" />
+        <action
+            android:id="@+id/action_accountOptionsFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/from_right_animation"
+            app:exitAnim="@anim/to_left_animation"
+            app:popEnterAnim="@anim/from_left_animation"
+            app:popExitAnim="@anim/to_right_animation" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.store2.fragments.logReg.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/account_option_bottom"
+            app:popUpTo="@id/accountOptionsFragment"
+            app:popEnterAnim="@anim/from_left_animation"
+            app:popExitAnim="@anim/to_right_animation"/>
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.store2.fragments.logReg.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_reg">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/account_option_bottom"
+            app:popUpTo="@id/accountOptionsFragment"
+            app:popEnterAnim="@anim/from_left_animation"
+            app:popExitAnim="@anim/to_right_animation"/>
+    </fragment>
+    <fragment
+        android:id="@+id/introductionFragment"
+        android:name="com.example.store2.fragments.logReg.IntroductionFragment"
+        android:label="IntroductionFragment"
+        tools:layout="@layout/fragment_introduction">
+        <action
+            android:id="@+id/action_introductionFragment_to_accountOptionsFragment"
+            app:destination="@id/accountOptionsFragment"
+            app:enterAnim="@anim/account_option_bottom" />
+    </fragment>
+</navigation>

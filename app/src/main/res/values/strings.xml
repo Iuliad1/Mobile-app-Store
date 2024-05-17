@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rightAdress">Bine ai venit\nDescoperă și susține producătorii locali</string>
+    <string name="quality">Este acum ușor să ajungi \nla cea mai bună calitate!</string>
+</resources>
